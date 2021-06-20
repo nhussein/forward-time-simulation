@@ -1,3 +1,4 @@
+#--------------------------Python in R---------------------------------------------
 library(reticulate)
 use_condaenv("r_reticulate")
 
@@ -34,7 +35,8 @@ initPop.evolve(
 
 saveCSV(initPop, filename='2ndGenAsexual.csv',
         infoFields=['ind_id','parent_idx'])
-#----------------------------------------------------------------R
+
+#use esc key to go back to R
 secondGenAsexual= read.csv('2ndGenAsexual.csv')
 subPopulations = read.csv('subpopulations.csv')
 subPopulations = subPopulations[-(1:7),]
